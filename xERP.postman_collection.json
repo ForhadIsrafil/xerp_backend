@@ -1,0 +1,1717 @@
+{
+	"info": {
+		"_postman_id": "940082f4-c2af-421d-ba9c-c106902af26b",
+		"name": "xERP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"email\":\"fixeyu@findemail.info\",\n\t\"password\":\"123456\", \n\t\"first_name\":\"Mahmud\", \n\t\"last_name\":\"Abdur Rahman\",\n\t\"cellphone\": \"1705372348\",\n\t\"country\": 19,\n\t\"address\": \"71/3, Housing Estate, Rajshahi\",\n\t\"postal_code\": 6303,\n\t\"company_name\": \"Some Company\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "active-account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"security_code\":\"nHia7\"\n\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/active-account",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"active-account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\":\"clanlord.ikot@gmail.com\",\n\"password\":\"123456\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/signin",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "goal/5",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token aa6ecb9ca5a801831365223213bf28e78f1d1bef",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"company\": 4,\n\t\"project\": 8,\n\t\"last_updated_by\": 2\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/goal/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"goal",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/project/8",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"dfgddddd\", \n\t\"last_updated_by\": 3\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/project/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"project",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Project 1\",\n\t\"text\": \"Test Project1\", \n\t\"last_updated_by\": 1,\n\t\"company\": 1,\n\t\"start_date\": \"2019-06-27\",\n\t\"end_date\": \"2019-11-25\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/project",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "goal",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"company\": 1,\n\t\"project\": 1,\n\t\"last_updated_by\": 1\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/goal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"goal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/task",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task/2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"goal\": 1,\n\t\"owner\": 1,\n\t\"last_updated_by\": 1\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/task/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task-details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "task",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "task comment__1",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/task-details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single-task-details/1",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"task\": 1,\n\t\"comment\": \"fggggggggggggggg\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/task-details/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task-details",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "issue",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "classification",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "task",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "project",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "last_updated_by",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/issue",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"issue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "issue/1",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "title......................................",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "desssssssssssss",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "classification",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "task",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "project",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "last_updated_by",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/issue/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"issue",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "issue-details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "task",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/issue-details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"issue-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "issue-details/1",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "task",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "update comment...",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/issue-details/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"issue-details",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task-issue-resulation/2",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "task",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "/task-issue-resulation comment _______updated__2",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "last_updated_by",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/task-issue-resulation/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task-issue-resulation",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task-issue-resulation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "task",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "/task-issue-resulation comment _______2",
+							"type": "text"
+						},
+						{
+							"key": "attachment",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "last_updated_by",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/task-issue-resulation",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task-issue-resulation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/license",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "company",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "company model",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/license",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"license"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "license/2",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "company",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "license model...",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/license/2",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"license",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "department-model-permission/1",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "department",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "permission",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/department-model-permission/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"department-model-permission",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "department-model-permission",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "department",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "permission",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/department-model-permission",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"department-model-permission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "department-role-model-permission",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "department",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "permission",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/department-role-model-permission",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"department-role-model-permission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "department-role-model-permission/4",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 6d19ec6bb22cd349d9c4f17cd6ee6f0438c453a8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "department",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "permission",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/department-role-model-permission/4",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"department-role-model-permission",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "token 9f90735723231098528aef618803092a28de5f33"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/upload/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Project 1\",\n\t\"text\": \"Test Project1\", \n\t\"last_updated_by\": 1,\n\t\"company\": 1,\n\t\"start_date\": \"2019-06-27\",\n\t\"end_date\": \"2019-11-25\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/project",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project edit",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Project 2\",\n\t\"text\": \"Test Project2\",\n\t\"start_date\": \"2019-06-27\",\n\t\"end_date\": \"2019-11-25\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/project/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"project",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "project delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Project 1\",\n\t\"text\": \"Test Project1\", \n\t\"last_updated_by\": 1,\n\t\"company\": 1,\n\t\"start_date\": \"2019-06-27\",\n\t\"end_date\": \"2019-11-25\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/project/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"project",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "goal create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Random 1\",\n\t\"details\": \"This is goal 1\",\n\t\"project\": 3,\n\t\"last_updated_by\": 1,\n\t\"start_date\": \"2019-06-28\",\n\t\"end_date\": \"2019-07-03\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/goal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"goal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "goal update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Goal less\",\n\t\"details\": \"This is goal 1\",\n\t\"start_date\": \"2019-06-28\",\n\t\"end_date\": \"2019-07-03\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/goal/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"goal",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "goal delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Goal less\",\n\t\"details\": \"This is goal 1\",\n\t\"start_date\": \"2019-06-28\",\n\t\"end_date\": \"2019-07-03\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/goal/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"goal",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "goal view single",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Goal less\",\n\t\"details\": \"This is goal 1\",\n\t\"start_date\": \"2019-06-28\",\n\t\"end_date\": \"2019-07-03\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/goal/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"goal",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Task 1\",\n\t\"text\": \"Test Task 1\", \n\t\"last_updated_by\": 1,\n\t\"goal\": 1,\n\t\"start_date\": \"2019-06-27\",\n\t\"end_date\": \"2019-11-25\",\n\t\"owner\": 1\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/task",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task single view",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/task/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "task edit",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 40c88124fd749b07d3362e0bb1bc2c0d46096891",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Task Edited\",\n\t\"text\": \"Test Task 1\", \n\t\"start_date\": \"2019-06-27\",\n\t\"end_date\": \"2019-11-25\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/task/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "department-role-model-permission-crud",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token b37bd646aa916e49bc0762b18a6a84c83fd3be3d",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "department",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "permission",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "user_id",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/department-role-model-permission-crud",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"department-role-model-permission-crud"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-model-permission-crud",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token b37bd646aa916e49bc0762b18a6a84c83fd3be3d",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "permission",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/user-model-permission-crud",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"user-model-permission-crud"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send-registration-invitation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token b6a2f2b063a7bb27383f2d40551086f1cdcf2200",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"department_id\": 7,\n\t\"email\": \"nutu@daily-email.com\"\n}"
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/v1/send-registration-invitation",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"send-registration-invitation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

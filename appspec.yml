@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+- source: /
+- destination: /var/www/
+hooks:
+BeforeInstall: 
+- location: scripts
+timeout: 300
+runas: root
+ApplicationStop:
+- location: scripts
